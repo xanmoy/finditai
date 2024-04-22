@@ -81,4 +81,4 @@ We would like to thank the following individuals and organizations for their con
 
 ## About Us
 
-Synthia AI is developed and maintained by [Xanmoy]. Learn more about us at [https://www.xanmoy.me].
+Synthia AI is developed and maintained by [Xanmoy](https://www.xanmoy.me). Learn more about us at [Website](https://www.xanmoy.me).
