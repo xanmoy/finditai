@@ -1,6 +1,8 @@
+# Synthia AI
 
+![Synthia AI](https://itequia.com/wp-content/uploads/2022/10/Evolucio%CC%81n-inteligencia-artificial-u%CC%81ltimos-an%CC%83os-Itequia.png) 
 
-## <h1 name="header"> Synthia AI</h1>
+## Introduction
 
 Synthia AI is an intelligent assistant powered by cutting-edge technology, including Next.js, Chakra UI, Tailwind CSS, and the Gemini AI API. It offers users a seamless and intuitive experience for interacting with artificial intelligence.
 
@@ -12,47 +14,21 @@ Synthia AI is an intelligent assistant powered by cutting-edge technology, inclu
 - *Interactive Conversations*: Users can engage in interactive conversations with Synthia AI, receiving intelligent responses and assistance for a wide range of tasks.
 - *Customizable Themes*: Synthia AI allows users to customize the interface with different themes and color schemes, providing a personalized experience.
 
-## <a name="tech-stack">Tech Stack</a>
+## Getting Started
 
-- Next.js
-- Primsa
-- Shadcn
-- Tailwind Css
-- Gemini AI
+To start using Synthia AI, follow these steps:
 
-## <a name="quick-start">Integration and Installation Process</a>
+1. *Installation*: Clone this repository to your local machine and install dependencies using npm install.
 
-Follow these steps to set up the project locally on your device.
+2. *Configuration*: Set up your Gemini AI API credentials by creating a .env.local file and adding your API key:
 
-**Prerequisites**
+    
+    GEMINI_API_KEY=your_api_key_here
+    
 
-Make sure you have the following installed on your machine:
+3. *Run the Development Server*: Start the Next.js development server with npm run dev.
 
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/)
-- [Git](https://git-scm.com/)
-
-**Clone this Project**
-
-```bash
-git clone https://github.com/xanmoy/synthia.git
-cd gemini-clone-nextjs
-```
-
-**Installation**
-
-Install dependencies using yarn:
-
-```bash
-yarn
-```
-
-**Running the Project using yarn**
-
-```bash
-yarn run dev
-```
-
+4. *Access Synthia AI*: Open your web browser and navigate to http://localhost:3000 to access Synthia AI.
 
 ## Usage
 
