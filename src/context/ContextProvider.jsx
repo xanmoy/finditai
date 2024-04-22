@@ -18,8 +18,15 @@ const ContextProvider = ({ children }) => {
       setResult((prev) => prev + newWord);
     }, 70 * index);
   };
+  const [typedResult, setTypedResult] = useState("");
+
   // on submit
   const submit = async (prompt) => {
+    if (String(prompt).trim() === "") {
+      console.error("Empty prompt submitted. Please enter a question or request.");
+      // Optionally display an error message to the user
+      return;
+    }
     setLoading(true);
     setResult("");
     setDisplayResult(true);

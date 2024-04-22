@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Link from "next/link";
 import {
   CircleUserRound,
@@ -21,15 +21,29 @@ const SynthiaBody = () => {
     input,
     setInput,
   } = useContext(Context);
-  console.log(loading, "loading");
+  const [isInputEmpty, setIsInputEmpty] = useState(true);
+
+  // Function to handle input change
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+    setIsInputEmpty(e.target.value.trim() === "");
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isInputEmpty) {
+      submit(); // Call the submit function from context provider
+    }
+  };
   return (
     <div className="flex-1 min-h-[100vh] pb-[15vh] relative">
       <div className="flex items-center justify-between p-5 lg:px-96 text-xl text-gray-400">
-        <h1 className="font-bold">Synthia AI</h1><p className="text-sm">developed by <Link href="https://xanmoy.me" className="text-indigo-600">
+        <h1 className="font-bold"><Link href="/">Synthia AI</Link></h1><p className="text-sm">developed by <Link href="https://xanmoy.me" className="text-indigo-600">
           Xanmoy
         </Link></p>
         {/* <CircleUserRound size={40} className="text-softTextColor" /> */}
-        
+
       </div>
       <div className="max-w-[900px] m-auto">
         {!displayResult ? (
@@ -41,7 +55,7 @@ const SynthiaBody = () => {
 
                 </span>
               </p>
-              
+
               <p>How can I help you today?</p>
             </div>
             {/* <div className="grid grid-cols-4 gap-5 p-5">
@@ -77,32 +91,37 @@ const SynthiaBody = () => {
           </>
         ) : (
           <div className="result p-5">
-              <div className="my-10 flex items-center gap-5 text-gray-400 rounded-2xl p-5 bg-bgSecondaryColor w-full">
-                <CircleUserRound size={34} className="text-indigo-400" />
+            <div className="my-10 flex items-center gap-5 text-gray-400 rounded-2xl p-5 bg-bgSecondaryColor w-full">
+              <CircleUserRound size={34} className="text-indigo-400" />
               <p>{recentPrompts}</p>
             </div>
-              <div className="flex items-start gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
-                
-                <Brain size={34} className="text-white"/>
+            <div className="flex items-start gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
+
+              <Brain size={34} className="text-white" />
               <p
-                  className="text-md font-normal loading-6 "
+                className="text-md font-normal loading-6 "
                 dangerouslySetInnerHTML={{ __html: result }}
               ></p>
             </div>
           </div>
         )}
         <div className="absolute bottom-0 w-full max-w-[900px] px-5 m-auto">
-          <form action={submit}>
+          <form onSubmit={handleSubmit}>
             <div className="flex items-center justify-between gap-5 bg-bgSecondaryColor py-2.5 pr-5 pl-2 rounded-full">
               <input
-                onChange={(e) => setInput(e.target.value)}
+                onChange={handleInputChange}
                 value={input}
                 type="text"
                 className="flex-1 bg-transparent border-none outline-none p-2 text-md text-gray-400"
                 placeholder="Enter a prompt here"
               />
-              <div className="flex cursor-pointer ">
-                <SendHorizontal type="submit" size={20} className="hover:bg-zinc-600 hover:text-zinc-900"/>
+              <div className={`flex cursor-pointer ${isInputEmpty ? 'pointer-events-none' : ''}`}>
+                <button
+                  type="submit"
+                  className={`focus:outline-none ${isInputEmpty ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  <SendHorizontal size={20} className=" hover:text-zinc-900" />
+                </button>
               </div>
             </div>
           </form>
