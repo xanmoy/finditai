@@ -9,6 +9,8 @@ export const metadata = {
   description: "Synthia AI is a powerful AI developed by Xanmoy",
 };
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

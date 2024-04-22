@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.contain{
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+25&display=swap');
+
+.contain {
   background-color: var(--bg);
   color: var(--textColor);
 }
@@ -25,4 +27,11 @@
 
 :root {
   min-height: 100vh;
+}
+
+.synthia-text {
+  font-family: "Jersey 25", sans-serif;
+
+
+
 }

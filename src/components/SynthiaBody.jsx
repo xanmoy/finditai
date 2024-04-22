@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useState } from "react";
 import Link from "next/link";
+
 import {
   CircleUserRound,
   Compass,
@@ -10,7 +11,9 @@ import {
   SendHorizontal,
   Brain,
 } from "lucide-react";
+
 import { Context } from "@/context/ContextProvider";
+import Navbar from "./ui/Navbar";
 const SynthiaBody = () => {
   const {
     submit,
@@ -38,13 +41,7 @@ const SynthiaBody = () => {
   };
   return (
     <div className="flex-1 min-h-[100vh] pb-[15vh] relative">
-      <div className="flex items-center justify-between p-5 lg:px-96 text-xl text-gray-400">
-        <h1 className="font-bold"><Link href="/">Synthia AI</Link></h1><p className="text-sm">developed by <Link href="https://xanmoy.me" className="text-indigo-600">
-          Xanmoy
-        </Link></p>
-        {/* <CircleUserRound size={40} className="text-softTextColor" /> */}
-
-      </div>
+      <Navbar />
       <div className="max-w-[900px] m-auto">
         {!displayResult ? (
           <>
@@ -95,7 +92,7 @@ const SynthiaBody = () => {
               <CircleUserRound size={34} className="text-indigo-400" />
               <p>{recentPrompts}</p>
             </div>
-            <div className="flex items-start gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
+            <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
 
               <Brain size={34} className="text-white" />
               <p
@@ -105,7 +102,7 @@ const SynthiaBody = () => {
             </div>
           </div>
         )}
-        <div className="absolute bottom-0 w-full max-w-[900px] px-5 m-auto">
+        <div className="bottom-0 w-full max-w-[900px] px-5 m-auto fixed pt-5 bg-[#000000]">
           <form onSubmit={handleSubmit}>
             <div className="flex items-center justify-between gap-5 bg-bgSecondaryColor py-2.5 pr-5 pl-2 rounded-full">
               <input
@@ -125,7 +122,7 @@ const SynthiaBody = () => {
               </div>
             </div>
           </form>
-          <p className="text-gray-400 text-sm text-center p-3">
+          <p className="text-gray-400 text-xs	 text-center p-3">
             Synthia may display inaccurate info, including about people, so
             double-check its responses.
           </p>
