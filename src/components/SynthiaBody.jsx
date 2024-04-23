@@ -89,12 +89,12 @@ const SynthiaBody = () => {
         ) : (
           <div className="result p-5">
             <div className="my-10 flex items-center gap-5 text-gray-400 rounded-2xl p-5 bg-bgSecondaryColor w-full">
-              <CircleUserRound size={34} className="text-indigo-400" />
+                <p className="text-indigo-400"><CircleUserRound /></p>
               <p>{recentPrompts}</p>
             </div>
             <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
 
-              <Brain size={34} className="text-white" />
+                <p className="text-indigo-400"> <Brain className="text-white" /></p>
               <p
                 className="text-md font-normal loading-6 "
                 dangerouslySetInnerHTML={{ __html: result }}
