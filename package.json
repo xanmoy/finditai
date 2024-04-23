@@ -1,5 +1,5 @@
 {
-  "name": "gemini-clone",
+  "name": "synthia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
     "@google/generative-ai": "^0.7.1",
     "@radix-ui/react-popover": "^1.0.7",
     "class-variance-authority": "^0.7.0",
@@ -23,6 +26,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.3",
