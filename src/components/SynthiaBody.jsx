@@ -117,7 +117,7 @@ const SynthiaBody = () => {
                   type="submit"
                   className={`focus:outline-none ${isInputEmpty ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
-                  <SendHorizontal size={20} className=" hover:text-zinc-900" />
+                  <SendHorizontal size={20} className=" hover:text-zinc-300" />
                 </button>
               </div>
             </div>
