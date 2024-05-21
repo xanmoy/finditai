@@ -73,7 +73,7 @@ const FindItBody = () => {
             </div>
           </div>
         )}
-        <div className="bottom-0 w-full max-w-[900px] px-5 m-auto fixed pt-5 bg-[#000000]">
+        <div className="bottom-0 w-full max-w-[900px] px-5 m-auto fixed pt-5 bg-[#18181b]">
           <form onSubmit={handleSubmit}>
             <div className="flex items-center justify-between gap-5 bg-bgSecondaryColor py-2.5 pr-5 pl-2 rounded-full">
               <input

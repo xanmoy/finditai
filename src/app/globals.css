@@ -9,7 +9,7 @@
 }
 
 .dark {
-  --bg: #000000;
+  --bg: #18181b;
   --bgSecondary: #232425;
   --bgChatSecondary: #3b3c3d;
   --textColor: #444746;
@@ -17,13 +17,13 @@
   --softTextColor: #a6a6a6;
 }
 
-.light {
+/* .light {
   --bg: white;
   --bgSecondary: #f1f5f9;
   --textColor: black;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
-}
+} */
 
 :root {
   min-height: 100vh;
