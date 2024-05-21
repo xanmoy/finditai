@@ -14,7 +14,7 @@ import {
 
 import { Context } from "@/context/ContextProvider";
 import Navbar from "./ui/Navbar";
-const SynthiaBody = () => {
+const FindItBody = () => {
   const {
     submit,
     recentPrompts,
@@ -47,54 +47,25 @@ const SynthiaBody = () => {
           <>
             <div className="my-12 text-5xl font-medium p-5">
               <p>
-                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600">
-                  Hello, I am Synthia
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                  Hello, I am FindIt AI
 
                 </span>
               </p>
 
               <p>How can I help you today?</p>
             </div>
-            {/* <div className="grid grid-cols-4 gap-5 p-5">
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
-                <Compass
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>What’s the reaction to and impact of autonomous vehicles</p>
-                <Lightbulb
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Come up with a recipe for an upcoming event</p>
-                <Youtube
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Evaluate and rank common camera categories</p>
-                <Code
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-            </div> */}
+           
           </>
         ) : (
           <div className="result p-5">
             <div className="my-10 flex items-center gap-5 text-gray-400 rounded-2xl p-5 bg-bgSecondaryColor w-full">
-                <p className="text-indigo-400"><CircleUserRound /></p>
+                <p className="text-blue-400"><CircleUserRound /></p>
               <p>{recentPrompts}</p>
             </div>
-            <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-full">
+            <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-blue-600 w-full">
 
-                <p className="text-indigo-400"> <Brain className="text-white" /></p>
+                <p className="text-blue-400"> <Brain className="text-white" /></p>
               <p
                 className="text-md font-normal loading-6 "
                 dangerouslySetInnerHTML={{ __html: result }}
@@ -110,7 +81,7 @@ const SynthiaBody = () => {
                 value={input}
                 type="text"
                 className="flex-1 bg-transparent border-none outline-none p-2 text-md text-gray-400"
-                placeholder="Enter a prompt here"
+                placeholder="Search here"
               />
               <div className={`flex cursor-pointer ${isInputEmpty ? 'pointer-events-none' : ''}`}>
                 <button
@@ -123,7 +94,7 @@ const SynthiaBody = () => {
             </div>
           </form>
           <p className="text-gray-400 text-xs	 text-center p-3">
-            Synthia may display inaccurate info, including about people, so
+            FindIt AI may display inaccurate info, including about people, so
             double-check its responses.
           </p>
         </div>
@@ -132,4 +103,4 @@ const SynthiaBody = () => {
   );
 };
 
-export default SynthiaBody;
+export default FindItBody;

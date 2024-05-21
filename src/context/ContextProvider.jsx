@@ -1,5 +1,5 @@
 "use client";
-import runChat from "@/lib/synthia";
+import runChat from "@/lib/findit";
 import React, { createContext, useState } from "react";
 
 export const Context = createContext();
