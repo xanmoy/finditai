@@ -97,9 +97,12 @@ const FindItBody = () => {
               </div>
             </div>
           </form>
-          <p className="text-gray-400 text-xs	 text-center p-3">
+          <p className="text-gray-400 text-xs	 text-center p-2">
             COPILOT can make mistakes. Check important info.
           </p>
+          <p className="text-sm text-center pb-2">developed by <Link href="https://twitter.com/xanmoy" className="text-blue-600 text-center text-sm">
+            Xanmoy
+          </Link></p>
         </div>
       </div>
     </div>

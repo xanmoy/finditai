@@ -6,6 +6,7 @@
 .contain {
   background-color: var(--bg);
   color: var(--textColor);
+  overflow-x: hidden;
 }
 
 .dark {
