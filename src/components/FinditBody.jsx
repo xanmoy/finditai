@@ -48,24 +48,28 @@ const FindItBody = () => {
             <div className="my-12 text-5xl font-medium p-5">
               <p>
                 <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  Hello, I am FindIt AI
+                  XEOLY COPILOT
 
                 </span>
               </p>
 
-              <p>How can I help you today?</p>
+              <p> I am here to help you get things done faster.</p>
             </div>
            
           </>
         ) : (
-          <div className="result p-5">
-            <div className="my-10 flex items-center gap-5 text-gray-400 rounded-2xl p-5 bg-bgSecondaryColor w-full">
-                <p className="text-blue-400"><CircleUserRound /></p>
-              <p>{recentPrompts}</p>
-            </div>
-            <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-blue-600 w-full">
+            <div className="result p-5 ">
+              <div className="flex justify-end">
+              <div className="text-end my-10 flex gap-5 text-gray-400 rounded-2xl p-5 w-fit items-end bg-bgSecondaryColor justify-end">
+                {/* bg-bgSecondaryColor */}
+                
+                <p>{recentPrompts}</p>
+                {/* <p className="text-blue-400"><CircleUserRound /></p> */}
+                </div>
+              </div>
+              <div className="flex items-start mb-10 gap-5 text-gray-50 rounded-2xl p-5 bg-indigo-600 w-fit">
 
-                <p className="text-blue-400"> <Brain className="text-white" /></p>
+                {/* <p className="text-blue-400"> <Brain className="text-white" /></p> */}
               <p
                 className="text-md font-normal loading-6 "
                 dangerouslySetInnerHTML={{ __html: result }}
@@ -94,8 +98,7 @@ const FindItBody = () => {
             </div>
           </form>
           <p className="text-gray-400 text-xs	 text-center p-3">
-            FindIt AI may display inaccurate info, including about people, so
-            double-check its responses.
+            COPILOT can make mistakes. Check important info.
           </p>
         </div>
       </div>

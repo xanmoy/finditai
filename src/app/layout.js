@@ -5,8 +5,8 @@ import ContextProvider from "@/context/ContextProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "FindIT AI",
-  description: "FindIT is a powerful AI developed by Xanmoy",
+  title: "Xeoly Copilot | A powerful AI developed by Xanmoy",
+  description: "Xeoly COPILOT is a powerful AI developed by Xanmoy",
 };
 
 
